@@ -73,11 +73,6 @@ RUN set -ex; \
     apt-get install -y python3 python3-pip; \
     rm -rf /var/lib/apt/lists/*
 
-RUN set -ex; \
-    rm -rf /opt/spark/jars/zookeeper-jute-3.6.3.jar
-COPY zookeeper-jute-3.9.jar /opt/spark/jars/
-
-
 COPY entrypoint.sh /opt/
 
 ENV SPARK_HOME /opt/spark
