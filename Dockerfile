@@ -75,7 +75,7 @@ RUN set -ex; \
 
 RUN set -ex; \
     rm -rf /opt/spark/jars/zookeeper-jute-3.6.3.jar
-COPY zookeeper-jute-3.9.jar
+COPY zookeeper-jute-3.9.jar /opt/spark/jars/
 
 
 COPY entrypoint.sh /opt/
