@@ -1,0 +1,6 @@
+git clone https://github.com/manshiva4/kumar.git
+docker build -t spark3.5.1-scala2.12-jre22-ubuntu2204 .
+
+  docker tag spark3.5.1-scala2.12-jre22-ubuntu2204 kumaraswamymaduri/spark3.5.1-scala2.12-jre22-ubuntu2204
+  docker login
+  docker push kumaraswamymaduri/spark3.5.1-scala2.12-jre22-ubuntu2204
