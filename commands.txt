@@ -2,6 +2,9 @@
 git clone https://github.com/manshiva4/containers.git
 C:\Users\manas\containers\22\jre\ubuntu\noble>docker build -t eclipse-temurin22-2404ubuntu .
 
+C:\Users\manas\spark-docker\4.0.0-preview1\scala2.13-java17-ubuntu>git clone https://github.com/manshiva4/spark-docker.git
+C:\Users\manas\spark-docker\4.0.0-preview1\scala2.13-java17-ubuntu>docker build -t spark4.0.0-java22-scala-2404ubuntu .
+
 git clone https://github.com/manshiva4/kumar.git
 docker build -t spark3.5.1-scala2.12-jre22-ubuntu2204 .
 
