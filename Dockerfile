@@ -73,9 +73,9 @@ RUN set -ex; \
     apt-get install -y python3 python3-pip; \
     rm -rf /var/lib/apt/lists/*
 
-RUN set -ex; \
-    rm -rf /opt/spark/jars/mesos-1.4.3-shaded-protobuf.jar; \
-    rm -rf /opt/spark/jars/netty-codec-http2-4.1.96.Final.jar;
+#RUN set -ex; \
+#    rm -rf /opt/spark/jars/mesos-1.4.3-shaded-protobuf.jar; \
+#    rm -rf /opt/spark/jars/netty-codec-http2-4.1.96.Final.jar;
 
 COPY entrypoint.sh /opt/
 
