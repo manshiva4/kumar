@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-FROM spark4.0.0-java22-scala-2404ubuntu
+FROM spark4.0.0-java22-scala-2404ubuntu-curl
 
 USER root
 
