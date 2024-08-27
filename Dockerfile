@@ -20,7 +20,7 @@ USER root
 
 RUN set -ex; \
     apt-get update; \
-    apt-get install -y python3 python3-pip; \
+    apt-get install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqllite3-dev libreadline-dev libffi-dev libffi-dev; \
     rm -rf /var/lib/apt/lists/*
 
 USER spark
