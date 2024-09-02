@@ -20,7 +20,7 @@ USER root
 
 RUN set -ex; \
     apt-get update; \
-    apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqllite3-dev libreadline-dev libffi-dev wget libbz2-dev; \
+    apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev wget libbz2-dev; \
     wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz;\
     tar -xf Python-3.7.4.tgz;\
     cd Python-3.7.4;\
