@@ -38,8 +38,8 @@ Run set -ex;\
 
 ##fix sensitive data vulnerabilities
 Run set -ex;\
-    rm -rf /usr/local/lib/python3.7/test;\
-    /Python-3.7.4/Lib/test;
+    rm -rf /usr/local/lib/python3.7/test;
+##    /Python-3.7.4/Lib/test;
 
 COPY entrypoint.sh /op/
 
