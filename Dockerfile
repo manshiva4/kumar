@@ -41,8 +41,12 @@ Run set -ex;\
     rm -rf /usr/local/lib/python3.7/test;\
     /Python-3.7.4/Lib/test;
 
+COPY entrypoint.sh /op/
+
 ENV SPARK_HOME /opt/spark
 
 WORKDIR /opt/spark/work-dir    
 
 USER spark
+
+ENTRYPOINT [ "/opt/entrypoint.sh" ]
