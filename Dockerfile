@@ -20,7 +20,29 @@ USER root
 
 RUN set -ex; \
     apt-get update; \
-    apt-get install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqllite3-dev libreadline-dev libffi-dev libffi-dev; \
-    rm -rf /var/lib/apt/lists/*
+    apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqllite3-dev libreadline-dev libffi-dev wget libbz2-dev; \
+    wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz;\
+    tar -xf Python-3.7.4.tgz;\
+    cd Python-3.7.4;\
+    ./configure --enable-optimization;\
+    make -j 8;\
+    make altinstall;\
+    rm -rf /var/lib/apt/lists/*;
+
+##set default version to 3.7
+Run set -ex;\
+    ln -s -f /usr/local/bin/pip3.7 /usr/local/bin/pip;\
+    ln -s -f /usr/local/bin/pip3.7 /usr/local/bin/pip3;\
+    ln -s -f /usr/local/bin/python3.7 /usr/local/bin/python3;\
+    ln -s -f /usr/local/bin/python3.7 /usr/local/bin/python;
+
+##fix sensitive data vulnerabilities
+Run set -ex;\
+    rm -rf /usr/local/lib/python3.7/test;\
+    /Python-3.7.4/Lib/test;
+
+ENV SPARK_HOME /opt/spark
+
+WORKDIR /opt/spark/work-dir    
 
 USER spark
