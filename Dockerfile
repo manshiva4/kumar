@@ -39,7 +39,7 @@ Run set -ex;\
 
 ##fix sensitive data vulnerabilities
 Run set -ex;\
-    rm -rf /usr/local/lib/python3.7/test;\
+    rm -rf /usr/local/lib/python3.9/test;\
     rm -rf /opt/spark/work-dir/Python-3.9.18/Lib/test;
 
 COPY entrypoint.sh /op/
