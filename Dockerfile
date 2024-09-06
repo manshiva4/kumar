@@ -20,8 +20,7 @@ USER root
 
 RUN set -ex; \
     apt-get update; \
-    apt install -y build-essential zlib1g-dev libffi-dev; \
-    ##zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev  wget libbz2-dev; \
+    apt install -y build-essential zlib1g-dev libffi-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev  wget libbz2-dev; \
     wget https://www.python.org/ftp/python/3.9.18/Python-3.9.18.tgz;\
     tar -xf Python-3.9.18.tgz;\
     cd Python-3.9.18;\
