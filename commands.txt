@@ -8,6 +8,6 @@ C:\Users\manas\spark-docker\4.0.0-preview1\scala2.13-java17-ubuntu>docker build 
 #git clone https://github.com/manshiva4/kumar.git
 #docker build -t spark4.0.0-scala2.12-jre22-ubuntu2404-python .
 
-  docker tag spark4.0.0-java22-scala-2404ubuntu-curl kumaraswamymaduri/spark4.0.0-java22-scala-2404ubuntu-curl
+  docker tag spark4.0.0-scala2.12-jre22-ubuntu2404-python kumaraswamymaduri/spark4.0.0-scala2.12-jre22-ubuntu2404-python
   docker login
-  docker push kumaraswamymaduri/spark4.0.0-java22-scala-2404ubuntu-curl
+  docker push kumaraswamymaduri/spark4.0.0-scala2.12-jre22-ubuntu2404-python
