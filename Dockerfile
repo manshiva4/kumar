@@ -14,39 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-FROM spark4.0.0-java22-scala-2404ubuntu-curl
+FROM spark:4.0.0-preview2-scala2.13-java21-ubuntu
 
 USER root
 
-RUN set -ex; \
-    apt-get update; \
-    apt install -y build-essential zlib1g-dev libffi-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev  wget libbz2-dev; \
-    wget https://www.python.org/ftp/python/3.9.18/Python-3.9.18.tgz;\
-    tar -xf Python-3.9.18.tgz;\
-    cd Python-3.9.18;\
-    ./configure --enable-optimization;\
-    make -j 8;\
-    make altinstall;\
-    rm -rf /var/lib/apt/lists/*;
 
-##set default version to 3.7
-Run set -ex;\
-    ln -s -f /usr/local/bin/pip3.9 /usr/local/bin/pip;\
-    ln -s -f /usr/local/bin/pip3.9 /usr/local/bin/pip3;\
-    ln -s -f /usr/local/bin/python3.9 /usr/local/bin/python3;\
-    ln -s -f /usr/local/bin/python3.9 /usr/local/bin/python;
-
-##fix sensitive data vulnerabilities
-Run set -ex;\
-    rm -rf /usr/local/lib/python3.9/test;\
-    rm -rf /opt/spark/work-dir/Python-3.9.18/Lib/test;
-
-COPY entrypoint.sh /op/
-
-ENV SPARK_HOME /opt/spark
-
-WORKDIR /opt/spark/work-dir    
-
-USER spark
-
-ENTRYPOINT [ "/opt/entrypoint.sh" ]
