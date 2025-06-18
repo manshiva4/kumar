@@ -22,6 +22,16 @@ USER root
 
 COPY --from=ubn / /
 
-RUN rm -rf /opt/spark/examples/jars/jackons-mapper-asl-1.9.13.jar
-RUN rm -rf /opt/spark/examples/jars/jackson-mapper-asl-1.9.13.jar
-RUN rm -rf /opt/spark/jars/hadoop-client-runtime-3.4.1.jar
+RUN rm -rf /opt/spark/examples/jars/jackons-mapper-asl-1.9.13.jar \
+    && rm -rf /opt/spark/examples/jars/jackson-mapper-asl-1.9.13.jar \
+    && rm -rf /opt/spark/jars/hadoop-client-runtime-3.4.1.jar \
+    && rm -rf /opt/spark/jars/avro-ipc-1.12.0.jar \
+    && rm -rf /usr/share/doc/ncurses-base \
+    && rm -rf /usr/share/doc/ncurses-bin \
+    && rm -rf /usr/share/doc/libncursesw6 \
+    && rm -rf /usr/share/doc/libtinfo6 \
+    && rm -rf /usr/share/doc/libpcre2-8-0 \
+    && rm -rf /usr/share/doc/libzstd1 \
+    && rm -rf /usr/share/lintian/overrides/libssl3t64
+    
+
