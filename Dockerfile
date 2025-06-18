@@ -24,8 +24,13 @@ COPY --from=ubn / /
 
 RUN rm -rf /opt/spark/examples/jars/jackons-mapper-asl-1.9.13.jar \
     && rm -rf /opt/spark/examples/jars/jackson-mapper-asl-1.9.13.jar \
-    && rm -rf /opt/spark/jars/hadoop-client-runtime-3.4.0.jar \
+    && rm -rf /opt/spark/jars/hadoop-client-runtime-3.3.4.jar \
     && rm -rf /opt/spark/jars/avro-ipc-1.12.0.jar \
+    && rm -rf /opt/spark/jars/avro-ipc-1.11.2.jar \
+    && rm -rf /opt/spark/jars/mesos-1.4.3-shaded-protobuf.jar \
+    && rm -rf /opt/spark/jars/netty-codec-http2-4.1.96.Final.jar \
+    && rm -rf /opt/spark/jars/libthrift-0.12.0.jar \
+    && rm -rf /opt/spark/jars/jackson-mapper-asl-1.9.13.jar \
     && rm -rf /usr/share/doc/ncurses-base \
     && rm -rf /usr/share/doc/ncurses-bin \
     && rm -rf /usr/share/doc/libncursesw6 \
