@@ -24,11 +24,4 @@ COPY --from=ubn / /
 
 RUN rm -rf /opt/spark/examples/jars/jackons-mapper-asl-1.9.13.jar
 RUN rm -rf /opt/spark/examples/jars/jackson-mapper-asl-1.9.13.jar
-RUN rm -rf /usr/share/doc/libtinfo6
-RUN rm -rf /usr/share/doc/libncursesw6
-RUN rm -rf /usr/share/doc/ncurses-bin
-RUN rm -rf /usr/share/doc/libsqlite3-0
-RUN rm -rf /usr/share/doc/libpcre2-8-0
-RUN rm -rf /usr/share/lintian/overrides/libc-bin
-RUN rm -rf /usr/share/lintian/overrides/libc6
-RUN rm -rf /opt/spark/jars/hadoop-client-runtime-3.4.0.jar
+RUN rm -rf /opt/spark/jars/hadoop-client-runtime-3.4.1.jar
