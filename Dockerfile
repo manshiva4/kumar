@@ -14,10 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+FROM ubuntu:noble as ubn
+
 FROM spark:latest
 
 USER root
 
+COPY --from=ubn / /
 
 RUN rm -rf /opt/spark/examples/jars/jackons-mapper-asl-1.9.13.jar
 RUN rm -rf /opt/spark/examples/jars/jackson-mapper-asl-1.9.13.jar
